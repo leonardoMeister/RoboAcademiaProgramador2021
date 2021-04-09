@@ -13,8 +13,9 @@ namespace EspecificaçãoRobo
         public Program()
         {
             TratadorMensagens.boasVindas();
-            string[] comando = TratadorMensagens.pegarComando();
+           // string[] comando = TratadorMensagens.pegarComando();
             int[] coordenadas = TratadorMensagens.pegarXY();
+
         }
  
         static void Main(string[] args)
