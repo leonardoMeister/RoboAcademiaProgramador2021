@@ -10,7 +10,6 @@ namespace EspecificaçãoRobo
     {
         private String direcao;  //norte sul leste oeste
         private int x, y;
-
         public Robo(string direcao, int x, int y)
         {
             this.direcao = direcao;
@@ -18,34 +17,44 @@ namespace EspecificaçãoRobo
             this.y = y;
         }
 
+        //implementar automaticamente o que o robissom vai fazer
+        public void interpretadorDeComandosRobo(string[] listaComandos)
+        {
+
+        }
+
         //AVANÇAR
         //leste x+1
         //sul  y-1
         //oeste x-1
         //norte y+1
-        public void Andar()
+        private void Andar()
         {
             if (direcao == "l")
             {
                 this.x++;
-            }else if (direcao == "s")
+            }
+            else if (direcao == "s")
             {
                 this.y--;
-            }else if (direcao == "o")
+            }
+            else if (direcao == "o")
             {
                 this.x--;
-            }else if (direcao == "n")
+            }
+            else if (direcao == "n")
             {
                 this.y++;
             }
         }
 
-        public void Rotacionar(String valorDireitaEsquerda)
-        {        
-            if (valorDireitaEsquerda == "d" || valorDireitaEsquerda == "D")
+        private void Rotacionar(String valorDireitaEsquerda)
+        {
+            if (valorDireitaEsquerda.ToLower() == "d")
             {
                 alterarDirecaoDireira();
-            } else if (valorDireitaEsquerda == "e" || valorDireitaEsquerda == "E")
+            }
+            else if (valorDireitaEsquerda.ToLower() == "e")
             {
                 alterarDirecaoEsquerda();
             }
@@ -61,10 +70,12 @@ namespace EspecificaçãoRobo
             else if (direcao == "s")
             {
                 this.direcao = "o";
-            }else if (direcao == "o")
+            }
+            else if (direcao == "o")
             {
                 this.direcao = "n";
-            }else if (direcao == "n")
+            }
+            else if (direcao == "n")
             {
                 this.direcao = "l";
             }

@@ -9,7 +9,5 @@ namespace EspecificaçãoRobo
     class Campo
     {
 
-
-
     }
 }

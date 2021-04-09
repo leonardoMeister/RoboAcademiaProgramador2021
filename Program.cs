@@ -9,18 +9,22 @@ namespace EspecificaçãoRobo
     class Program
     {
         Robo robo1, robo2;
-        
+
         public Program()
         {
+            //pegando tudo o que precisamos
             TratadorMensagens.boasVindas();
-           // string[] comando = TratadorMensagens.pegarComando();
-            int[] coordenadas = TratadorMensagens.pegarXY();
+            int[] areaMapa = TratadorMensagens.pegarAreaMapa();
+            string[] coordenadasRobo = TratadorMensagens.pegarCoordenadasRobo();
+            string[] comando = TratadorMensagens.pegarComando();
+
+            //criar os robos
 
         }
- 
+
         static void Main(string[] args)
         {
-            
+
             new Program();
         }
     }
