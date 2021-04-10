@@ -8,6 +8,6 @@ namespace EspecificaçãoRobo
 {
     class Campo
     {
-
+        //colocar uma mensagem falando sobre o campo ao final do comando
     }
 }

@@ -61,7 +61,7 @@ namespace EspecificaçãoRobo
                     String[] separarXYZ;
                     Console.WriteLine("Informe uma coordenada inicial para o Robô [Ex = 2 3 N]: ");
                     String valorXY = Console.ReadLine();
-                    separarXYZ = valorXY.Split();
+                    separarXYZ = valorXY.ToLower().Split();
                     { //verificando se são numeros
                         int teste = Convert.ToInt32(separarXYZ[0]);
                         teste = Convert.ToInt32(separarXYZ[1]);
@@ -81,11 +81,15 @@ namespace EspecificaçãoRobo
                 }
             }
         }
-        public static void boasVindas()
+        public static void boasVindas(String numeroRobo)
         {
-            Console.WriteLine("-------------------------------------------------");
-            Console.WriteLine("----Seja Bem Vindo ao Assistente Tupiniquim I----");
-            Console.WriteLine("-------------------------------------------------\n");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("------Seja Bem Vindo ao Assistente Tupiniquim I------");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine($"----------------------{numeroRobo}-------------------------");
+            Console.WriteLine("-----------------------------------------------------\n");
+
         }
     }
 }

@@ -9,16 +9,14 @@ namespace EspecificaçãoRobo
     class Robo
     {
          public String direcao;  //norte sul leste oeste
-         public int x, y;
+         public int x, y;        //Coordenadas Robo
         public Robo(string direcao, int x, int y)
         {
             this.direcao = direcao;
             this.x = x;
             this.y = y;
         }
-
-        //implementar automaticamente o que o robissom vai fazer
-        public void interpretadorDeComandosRobo(string[] listaComandos)
+        public void interpretadorComandosRobo(string[] listaComandos)
         {
             for (int i = 0; i < listaComandos.Length; i++)
             {
@@ -35,7 +33,6 @@ namespace EspecificaçãoRobo
                 }
             }
         }
-
         //AVANÇAR
         //leste x+1
         //sul  y-1
@@ -60,7 +57,6 @@ namespace EspecificaçãoRobo
                 this.y++;
             }
         }
-
         //     L =-=  S =-= O  =-=  N =-= L
         private void alterarDirecaoDireira()
         {
