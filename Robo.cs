@@ -8,8 +8,8 @@ namespace EspecificaçãoRobo
 {
     class Robo
     {
-        private String direcao;  //norte sul leste oeste
-        private int x, y;
+         public String direcao;  //norte sul leste oeste
+         public int x, y;
         public Robo(string direcao, int x, int y)
         {
             this.direcao = direcao;
@@ -20,7 +20,20 @@ namespace EspecificaçãoRobo
         //implementar automaticamente o que o robissom vai fazer
         public void interpretadorDeComandosRobo(string[] listaComandos)
         {
-
+            for (int i = 0; i < listaComandos.Length; i++)
+            {
+                if (listaComandos[i].ToLower() == "d")
+                {
+                    alterarDirecaoDireira(); 
+                }
+                else if (listaComandos[i].ToLower() == "e")
+                {
+                    alterarDirecaoEsquerda();
+                }else if (listaComandos[i].ToLower()=="m")
+                {
+                    Andar();
+                }
+            }
         }
 
         //AVANÇAR
@@ -45,18 +58,6 @@ namespace EspecificaçãoRobo
             else if (direcao == "n")
             {
                 this.y++;
-            }
-        }
-
-        private void Rotacionar(String valorDireitaEsquerda)
-        {
-            if (valorDireitaEsquerda.ToLower() == "d")
-            {
-                alterarDirecaoDireira();
-            }
-            else if (valorDireitaEsquerda.ToLower() == "e")
-            {
-                alterarDirecaoEsquerda();
             }
         }
 
