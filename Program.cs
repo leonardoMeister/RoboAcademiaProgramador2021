@@ -69,6 +69,7 @@ namespace EspecificaçãoRobo
             Console.WriteLine("-----------------------------------------------------");
             Console.WriteLine($"\n-------------Robô 2    x{robo2.x}, y{robo2.y}, Direção {robo2.direcao.ToUpper()}-------------");
             Console.WriteLine("\n-----------------------------------------------------\n\n");
+            Console.Read();
         }
         static void Main(string[] args)
         {

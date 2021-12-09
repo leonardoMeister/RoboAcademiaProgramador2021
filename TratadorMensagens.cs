@@ -12,7 +12,7 @@ namespace EspecificaçãoRobo
         {
             while (0 == 0)
             {
-                Console.WriteLine("Escreva o comando para o Robo [Ex = EMEEMMDM]: ");
+                Console.WriteLine("Escreva o comando para o Robo [Ex = EMEEMMDM]: \nE = Esquerda, D = Direita, M = Mover.");
                 string mensagemUsuario = Console.ReadLine();
                 string[] comandos = new string[mensagemUsuario.Length];
                 bool valorInvalido = false;
@@ -39,7 +39,7 @@ namespace EspecificaçãoRobo
                 try
                 {
                     int[] coord = new int[2];
-                    Console.WriteLine("Informe a área do mapa [Ex = 2 3]: ");
+                    Console.WriteLine("Informe a área do mapa [Ex = 2 3]: \n2 para X e 3 para Y. ");
                     String valorXY = Console.ReadLine();
                     String[] separarXY = valorXY.Split();
                     coord[0] = Convert.ToInt32(separarXY[0]);
@@ -59,7 +59,8 @@ namespace EspecificaçãoRobo
                 try
                 {
                     String[] separarXYZ;
-                    Console.WriteLine("Informe uma coordenada inicial para o Robô [Ex = 2 3 N]: ");
+                    string auxText = "Informe uma coordenada inicial para o Robô [Ex = 2 3 N]: \n[2 3 N] 2 para x, 3 para y, N S L O para a direção inicial."
+                    Console.WriteLine(auxText);
                     String valorXY = Console.ReadLine();
                     separarXYZ = valorXY.ToLower().Split();
                     { //verificando se são numeros
